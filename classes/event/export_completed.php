@@ -24,8 +24,7 @@ namespace local_export_api\event;
  * @copyright   2024 Wunderbyte GmbH <info@wunderbyte.at>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class exportcompleted extends \core\event\base {
-
+class export_completed extends \core\event\base {
     protected function init() {
         $this->data['crud'] = 'c';
         $this->data['edulevel'] = self::LEVEL_OTHER;
