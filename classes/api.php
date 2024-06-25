@@ -35,8 +35,9 @@ class api {
         $userid = $eventdata['relateduserid'];
         $useridnumber = $DB->get_field('user', 'idnumber', ['id' => $userid]);
         $courseid = $eventdata['courseid'];
+        $courseidnumber = $DB->get_field('course', 'idnumber', ['id' => $courseid]);
         $exportdata = [
-                'courseid' => $courseid,
+                'courseid' => $courseidnumber,
                 'userid' => $useridnumber,
                 'status' => 'completed',
         ];
