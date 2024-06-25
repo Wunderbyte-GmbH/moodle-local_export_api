@@ -20,7 +20,7 @@ use core\task\adhoc_task;
 use core\task\manager;
 use local_export_api\api;
 
-class exportdata extends adhoc_task {
+class export_data extends adhoc_task {
 
     public static function instance(course_completed $event): self {
         $task = new self();
@@ -39,10 +39,6 @@ class exportdata extends adhoc_task {
      */
     public function execute() {
         $data = json_decode($this->get_custom_data_as_string(), true);
-        $eventdata = new \stdClass();
-        $eventdata->relateduserid = $data['relateduserid'];
-        $eventdata->courseid = $data['courseid'];
-        $eventdata->objectid = $data['objectid'];
         api::export_data($data);
     }
 }

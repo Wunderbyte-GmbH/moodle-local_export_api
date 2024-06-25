@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_export_api';
-$plugin->release = '0.1.3';
-$plugin->version =  2024062400;
+$plugin->release = '0.1.4';
+$plugin->version =  2024062500;
 $plugin->requires = 2022112800;
 $plugin->maturity = MATURITY_BETA;
