@@ -51,7 +51,7 @@ class api {
             $data->timecreated = time();
             $data->completionid = $eventdata['objectid'];
             $id = $DB->insert_record('local_export_api', $data);
-            $eventjson = event\exportcompleted::create([
+            $eventjson = event\export_completed::create([
                     'context' => context_course::instance($courseid),
                     'objectid' => $id,
                     'relateduserid' => $userid,
