@@ -38,7 +38,7 @@ class api {
         $courseshortnanme = $DB->get_field('course', 'shortname', ['id' => $courseid]);
         $exportdata = [
                 'courseid' => $courseshortnanme,
-                'userid' => $useridnumber,
+                'userid' => $userid,
                 'status' => 'completed',
         ];
         mtrace(var_export($exportdata, true), PHP_EOL);
