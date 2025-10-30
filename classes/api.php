@@ -57,7 +57,10 @@ class api {
                     'relateduserid' => $userid,
             ]);
             $eventjson->trigger();
-        } else if (strpos($error, 'No user or seminar') !== false) {
+        } else if (
+            strpos($error, 'No user or seminar') !== false
+            || strpos($error, 'No assignment') !== false
+        ) {
             return;
         } else {
             throw new moodle_exception('error', '', '', null, $error);
